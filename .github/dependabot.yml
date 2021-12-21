@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - directory: "/"
+    package-ecosystem: "npm"
+    reviewers:
+      - "nhammond101"
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+
+  - directory: "/"
+    package-ecosystem: "github-actions"
+    reviewers:
+      - "nhammond101"
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+
+  - directory: "/"
+    package-ecosystem: "terraform"
+    reviewers:
+      - "nhammond101"
+    schedule:
+      interval: "daily"
+    target-branch: "main"
+
