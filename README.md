@@ -23,7 +23,48 @@ output "postman_access_key_secret" {
 }
 ```
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+## Requirements
 
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.14 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 3.27 |
+
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 3.27 |
+
+## Modules
+
+No modules.
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [aws_iam_access_key.cognito_user_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_access_key) | resource |
+| [aws_iam_policy.cognito_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_policy) | resource |
+| [aws_iam_user.cognito_user](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user) | resource |
+| [aws_iam_user_policy_attachment.cognito_user_policy_attachment](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/iam_user_policy_attachment) | resource |
+| [aws_iam_policy_document.cognito_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cognito_user_pool_arn"></a> [cognito\_user\_pool\_arn](#input\_cognito\_user\_pool\_arn) | The ARN of the User Pool to grant the Postman user access to | `string` | n/a | yes |
+| <a name="input_username"></a> [username](#input\_username) | [Optional] The username to assign to the IAM user to be created | `string` | `"postman-user"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_access_key_id"></a> [access\_key\_id](#output\_access\_key\_id) | The access key generated for the user |
+| <a name="output_access_key_secret"></a> [access\_key\_secret](#output\_access\_key\_secret) | The secret access key generated for the user |
+| <a name="output_user_arn"></a> [user\_arn](#output\_user\_arn) | The ARN of the newly created user |
+| <a name="output_user_name"></a> [user\_name](#output\_user\_name) | The name of the newly created user |
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 
 
