@@ -7,11 +7,6 @@ data "aws_iam_policy_document" "cognito_policy_document" {
 
     effect = "Allow"
 
-    principals {
-      identifiers = ["*"]
-      type        = "AWS"
-    }
-
     resources = [
       var.cognito_user_pool_arn
     ]
