@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.1](https://github.com/Waracle/tf-postman/compare/v1.0.0...v1.0.1) (2021-12-22)
+
+
+### Bug Fixes
+
+* Remove principal from policy ([e36fffd](https://github.com/Waracle/tf-postman/commit/e36fffd49d9fffe24407498d1f96994574b2a7f5))
+
 # 1.0.0 (2021-12-21)
 
 
