@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.2](https://github.com/Waracle/tf-postman/compare/v1.0.1...v1.0.2) (2022-02-10)
+
+
+### Bug Fixes
+
+* Specify min version ([468be41](https://github.com/Waracle/tf-postman/commit/468be410c03a326a3a1cd64b29addcc62f84af85))
+
 ## [1.0.1](https://github.com/Waracle/tf-postman/compare/v1.0.0...v1.0.1) (2021-12-22)
 
 
