@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+# [2.0.0](https://github.com/Waracle/tf-postman/compare/v1.0.3...v2.0.0) (2022-07-19)
+
+
+### Features
+
+* Add additional permissions ([59abb6d](https://github.com/Waracle/tf-postman/commit/59abb6d2976992390c4d363790893c16928bf1c9))
+
+
+### BREAKING CHANGES
+
+* Add readonly permissions to all APIs and Cloudwatch metrics
+
 ## [1.0.3](https://github.com/Waracle/tf-postman/compare/v1.0.2...v1.0.3) (2022-06-09)
 
 
