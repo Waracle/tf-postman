@@ -60,7 +60,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_cognito_user_pool_arn"></a> [cognito\_user\_pool\_arn](#input\_cognito\_user\_pool\_arn) | The ARN of the User Pool to grant the Postman user access to | `string` | n/a | yes |
+| <a name="input_cognito_user_pool_arn"></a> [cognito\_user\_pool\_arn](#input\_cognito\_user\_pool\_arn) | [Optional] The ARN of the User Pool to grant the Postman user access to | `string` | `""` | no |
 | <a name="input_username"></a> [username](#input\_username) | [Optional] The username to assign to the IAM user to be created | `string` | `"postman-user"` | no |
 
 ## Outputs

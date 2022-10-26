@@ -2,8 +2,9 @@
 # Variables: General
 # -----------------------------------------------------------------------------
 variable "cognito_user_pool_arn" {
-  description = "The ARN of the User Pool to grant the Postman user access to"
+  description = "[Optional] The ARN of the User Pool to grant the Postman user access to"
   type        = string
+  default     = ""
 }
 
 variable "username" {

@@ -37,6 +37,8 @@ data "aws_iam_policy_document" "cloudwatch_policy_document" {
 
 # IAM Policy statements for accessing the Cognito permissions
 data "aws_iam_policy_document" "cognito_policy_document" {
+  count = var.cognito_user_pool_arn != "" ? 1 : 0
+
   statement {
     actions = [
       "cognito-idp:AdminInitiateAuth"
@@ -65,7 +67,8 @@ resource "aws_iam_policy" "cloudwatch_policy" {
 
 # IAM Policy for accessing the Cognito userpools
 resource "aws_iam_policy" "cognito_policy" {
-  policy = data.aws_iam_policy_document.cognito_policy_document.json
+  count  = var.cognito_user_pool_arn != "" ? 1 : 0
+  policy = data.aws_iam_policy_document.cognito_policy_document[0].json
 }
 
 # Attach the API Gateway policy to the User
@@ -82,7 +85,8 @@ resource "aws_iam_user_policy_attachment" "cloudwatch_user_policy_attachment" {
 
 # Attach the Cognito policy to the User
 resource "aws_iam_user_policy_attachment" "cognito_user_policy_attachment" {
-  policy_arn = aws_iam_policy.cognito_policy.arn
+  count      = var.cognito_user_pool_arn != "" ? 1 : 0
+  policy_arn = aws_iam_policy.cognito_policy[0].arn
   user       = aws_iam_user.user.name
 }
 
