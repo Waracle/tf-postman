@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+# [2.1.0](https://github.com/Waracle/tf-postman/compare/v2.0.0...v2.1.0) (2022-10-26)
+
+
+### Features
+
+* **cognito:** Make cognito association optional ([4734f8b](https://github.com/Waracle/tf-postman/commit/4734f8b9cad18d627ba082de1d6d3fbfbcc9a284))
+
 # [2.0.0](https://github.com/Waracle/tf-postman/compare/v1.0.3...v2.0.0) (2022-07-19)
 
 
